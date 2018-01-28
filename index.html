@@ -70,9 +70,9 @@
 	</head>
 	<body onload="setVoicesVolume(), setBGVolume()">
 		<audio id="bg-sound" autoplay loop muted>
-			<source src="media/Portal2-05-Technical_Difficulties.mp3" type="audio/mp3">
+			<source src="media/music/Portal2-05-Technical_Difficulties.mp3" type="audio/mp3">
 		</audio>
-			<span id="top"></span>
+		<span id="top"></span>
 		<header>
 			<div class="background-video">
 				<div class="video-gradient"></div>
@@ -286,20 +286,27 @@
 					una cantidad idefinda de tiempo y avisandola de una evacuación de emergencia debido a una fusión del reactor.<br>
 					Una voz le habla pidiendola que abra la puerta. Al abrir la puerta aparece Wheatley, un núcleo de personalidad 
 					que esta encargado de todos los sujetos humanos, que al ser el unico sujeto de pruebas con vida, decide ayudarla para escapar los 2 instalaciónes.
-				<span class="sound" onclick="audioHandler('locutor-courtesy-call')">&#x1f50a;</span></p>
-				<audio id="locutor-courtesy-call">
-					<source src="media/voces/locutor/Announcer_openingcourtesy01_es.wav" type="audio/wav">
+				<span class="sound" onclick="audioHandler('wheatley-subjects')">&#x1f50a;</span></p>
+				<audio id="wheatley-subjects">
+					<source src="media/voces/Wheatley/wheatley_openingoutside01_es.wav" type="audio/wav">
 				</audio>
 				<p>Wheatley toma el control de la cámara de relajación, y la mueve a una zona de pruebas, similar a la del inicio de Portal, pensando que era un muelle
-					de carga.</p>
+					de carga. <span class="sound" onclick="audioHandler('wheatley-docking-bay')">&#x1f50a;</span></p>
+				<audio id="wheatley-docking-bay">
+					<source src="media/voces/Wheatley/wheatley_openingwallhitone02_es.wav" type="audio/wav">
+				</audio>
 				<p>Chell se ve obligada a separarse de Wheatley y entrar en las zonas de pruebas, muy deterioradas y algunas destruidas por el paso del tiempo, donde 
 					unos mensajes pregrabados la guiarán hasta terminar las pruebas.<br>
 					Chell va avanzando y se vuelve a encontrar con wheatley, que la indica donde esta el Dispositivo de portales.<br>
 					Con ayuda de Wheatley, ambos salen de las zonas de pruebas y recorren las instalaciones con la esperanza de escapar, y durante su recorrido, encuentran 
 					la cámara de GLaDOS, donde esta desconectada.</p>
-				<p>Wheatley pide a chell que pase por su cámara para encontrar el sistema de interruptores que activa la Cápsula de escape. <br>
+				<p>Wheatley pide a chell que pase por su cámara para encontrar el sistema de interruptores que activa la Cápsula de escape. 
+					<span class="sound" onclick="audioHandler('wheatley-glados-room')">&#x1f50a;</span><br>
+				<audio id="wheatley-glados-room">
+					<source src="media/voces/Wheatley/wheatley_gladosgantry20_es.wav" type="audio/wav">
+				</audio>
 					Al encontrar los interruptores, Chell conecta a Wheatley a la interfaz de control de la sala de interruptores para que encienda la luz, y por accidente, 
-					Wheatley sube el ascensor de la sala de interruptores accionando todos los interruptores y encendiendo a GLaDOS.</p>
+					Wheatley sube el ascensor de la sala de interruptores accionando todos los interruptores y activando a GLaDOS.</p>
 				<p>GLaDOS, enfadada por los sucesos de Portal, daña a Wheatley y tira a Chell por el incinerador donde quemó sus nucleos de personalidad.</p>
 				<p>En el incinerador, GLaDOS abre paso a Chell entre los escombros y le indica donde esta el Dispositivo de portales Dual para seguir con las pruebas.</p>
 				<h1>Cápitulo 3 y 4:</h1>
@@ -419,19 +426,19 @@
 							<source src="media/voces/cave/Cave_Johnson_eighties_intro03_es.wav" type="audio/wav">
 						</audio>
 						Durante el desarrollo del Gel de Conversión, Cave Johnson se envenenó con las piedras lunares, haciendo que su vida se vea 
-						en peligro de muerte. <span class="sound" onclick="audioHandler('cave-poison')">&#x1f50a;</span><br>
+						en peligro de muerte. <span class="sound" onclick="audioHandler('cave-poison')">&#x1f50a;</span></p>
 						<audio id="cave-poison">
 							<source src="media/voces/cave/Cave_Johnson_eighties_intro08_es.wav" type="audio/wav">
 						</audio>
 						
-						A causa de este acontecimiento, Cave Johnson, se le ocurrió la idea de guardar la conciencia y sentimientos humanos en un 
+						<p>A causa de este acontecimiento, Cave Johnson, se le ocurrió la idea de guardar la conciencia y sentimientos humanos en un 
 						disco, asi que puso a todos sus empleados a investigar sobre la Inteligencia Artificial y como guardar un cerebro humano 
 						digitalmente, y la creación de robots para suplantar los sujetos de pruebas humanos. 
-						<span class="sound" onclick="audioHandler('cave-ai')">&#x1f50a;</span><br>
+						<span class="sound" onclick="audioHandler('cave-ai')">&#x1f50a;</span></p>
 						<audio id="cave-ai">
 							<source src="media/voces/cave/Cave_Johnson_eighties_outro05_es.wav" type="audio/wav">
 						</audio>
-						Al morir, Caroline, su secretaria, tomó las riendas de Aperture Science, y a peticion de Cave Johnson, Caroline fue insertada 
+						<p>Al morir, Caroline, su secretaria, tomó las riendas de Aperture Science, y a peticion de Cave Johnson, Caroline fue insertada 
 						en un ordenador.</p>
 					
 					<p>En 1998, GLaDOS (Genetic Life and Disk Operating System) fué activada por primera vez. GLaDOS instantáneamente se vovió 
@@ -467,7 +474,7 @@
 				<div>Voces:</div>
 				<input type="range" id="voiceVolume" class="slider" oninput="setVoicesVolume()" value="20">
 				<div>Música:</div>
-				<input type="range" id="bgVolume" class="slider" oninput="setBGVolume()" value="00"><!-- volumen 10 -->
+				<input type="range" id="bgVolume" class="slider" oninput="setBGVolume()" value="5"><!-- volumen 10 -->
 			</div>
 			
 		</div>
