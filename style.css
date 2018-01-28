@@ -413,6 +413,7 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 	font-size: 2vw;
 	font-family: "din-medium";
 	margin-top: 0px;
+	text-transform: uppercase;
 }
 #history .article-container h1 {
 	font-size: 1.5vw;
