@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>Proyecto WEB</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+			// Add smooth scrolling to all links
+			$("a").on('click', function (event) {
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+					// Store hash
+					var hash = this.hash;
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function () {
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+		});
+		
+		/*Comprobador de estado de reproduccion*/
+		var audioVolume;
+		function isPlaying(id) { 
+			return !id.paused;
+		}
+		/*Control de volumen de las voces*/
+		function setVoicesVolume() {		
+			audioVolume = document.getElementById("voiceVolume").value / 100;
+			var voices = document.getElementsByTagName("audio");
+			for (i = 0; i <= voices.length - 1 ; i++) {
+				if (voices[i].id.indexOf("bg") == -1) { //Si no contiene "bg" en la ID
+					voices[i].volume = audioVolume;
+				}
+			}			
+		}
+		/*Control de volumen de la música de fondo*/
+		function setBGVolume() {		
+			audioVolume = document.getElementById("bgVolume").value / 100;
+			var bgMusic = document.getElementById("bg-sound");
+			bgMusic.muted = false;
+			bgMusic.volume = audioVolume;
+			if (audioVolume <= 0) {
+				bgMusic.pause();
+			} else {
+				bgMusic.play();
+			}
+
+		}	
+		/*Controlador de audio*/
+		function audioHandler(id){
+			var audio = document.getElementById(id);
+			if (isPlaying(audio)) {
+				audio.pause();
+			} else {
+				audio.currentTime=0;
+				audio.play();
+			}
+		}
+			
+		</script>
+	</head>
+	<body onload="setVoicesVolume(), setBGVolume()">
+		<audio id="bg-sound" autoplay loop muted>
+			<source src="media/Portal2-05-Technical_Difficulties.mp3" type="audio/mp3">
+		</audio>
+			<span id="top"></span>
+		<header>
+			<div class="background-video">
+				<div class="video-gradient"></div>
+				<video autoplay loop muted>
+					<source src="media/videos/bg/portalbg1.mp4" type="video/mp4">
+				</video>
+			</div>
+			<nav>
+				<a href="index.htm" id="flex-logo"><div id="logo"></div></a>
+				<a href="#history"><div class="menu-item">HISTORIA</div></a>
+				<a href="#aperture"><div class="menu-item">APERTURE</div></a>
+				<div class="menu-item">
+				<a class="dropdown-link" href="#characters-header">PERSONAJES</a>
+						<div class="dropdown">
+							<div class="dropdown-container">
+								<div class="dropdown-container-title">Personajes</div>
+								<div class="dropdown-item-container">
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>CHELL</span></div>
+											<div class="dropdown-item-img" id="dropdown-chell"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>GLADOS</span></div>
+											<div class="dropdown-item-img" id="dropdown-glados"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>WHEATLEY</span></div>
+											<div class="dropdown-item-img" id="dropdown-wheatley"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>CAVE JOHNSON</span></div>
+											<div class="dropdown-item-img" id="dropdown-cave-johnson"></div>
+										</div>
+									</a>
+									
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>CAROLINE</span></div>
+											<div class="dropdown-item-img" id="dropdown-caroline"></div>
+										</div>
+									</a>
+
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>NÚCLEOS DE PERSONALIDAD</span></div>
+											<div class="dropdown-item-img" id="dropdown-personality-core"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>LOCUTOR</span></div>
+											<div class="dropdown-item-img" id="dropdown-locutor"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>DOUG RATTMAN</span></div>
+											<div class="dropdown-item-img" id="dropdown-rattman"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>ATLAS Y P-BODY</span></div>
+											<div class="dropdown-item-img" id="dropdown-coop-robots"></div>
+										</div>
+									</a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item">
+					<a class="dropdown-link" href="index.html">MECÁNICAS</a>
+						<div class="dropdown">
+							<div class="dropdown-container">
+								<div class="dropdown-container-title">Mecánicas</div>
+								<div class="dropdown-item-container">
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>DISPOSITIVO PORTATIL<br>DE PORTALES</span></div>
+											<div class="dropdown-item-img" id="dropdown-portal-gun"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>CUBOS CONTRAPESADOS</span></div>
+											<div class="dropdown-item-img" id="dropdown-cubes"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>BOTONES</span></div>
+											<div class="dropdown-item-img" id="dropdown-button"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>RED DE EMANCIPACIÓN DE MATERIAL</span></div>
+											<div class="dropdown-item-img" id="dropdown-Emancipation-Grid"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>ESFERA DE ENERGIA COMPRIMIDA</span></div>
+											<div class="dropdown-item-img" id="dropdown-high-energy-pellet"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>TORRETAS</span></div>
+											<div class="dropdown-item-img" id="dropdown-turret"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>LASER TÉRMICO DISUASORIO</span></div>
+											<div class="dropdown-item-img" id="dropdown-Thermal-Discouragement-Beam"></div>
+										</div>
+									</a>
+
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>PLACA DE SALTO DE FE</span></div>
+											<div class="dropdown-item-img" id="dropdown-aereal-faith-plate"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>PUENTE DE HAZ<br>DE LUZ SOLIDO</span></div>
+											<div class="dropdown-item-img" id="dropdown-hard-light-bridge"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>RAYO TRACTOR/REPULSOR</span></div>
+											<div class="dropdown-item-img" id="dropdown-excursion-funnel"></div>
+										</div>
+									</a>
+									<a href="#logo">
+										<div class="dropdown-item">
+											<div class="dropdown-item-title"><span>GELES DE MOVILIDAD</span></div>
+											<div class="dropdown-item-img" id="dropdown-gels"></div>
+										</div>
+									</a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				<span style="clear: both"></span>
+				</nav>
+			<div class="presentation-text">"Bienvenido de nuevo al Centro de desarrollo de Aperture Science."
+				<span class="sound" onclick="audioHandler('locutor-welcome')">&#x1f50a;</span>
+				<div class="presentation-author">- LOCUTOR</div>
+			</div>
+			<audio id="locutor-welcome">
+				<source src="media/voces/locutor/Announcer_prehub06_es.wav" type="audio/wav">
+			</audio>
+		</header>
+		<article id="history">
+			<div class="article-container">
+			
+			</div>
+		</article>
+		<article id="aperture">
+			<div class="article-separator header"><div class="article-title">APERTURE SCIENCE</div></div>
+			<div class="article-content">
+				<div class="article-text">
+					<img src="media/aperture-science.png" alt="Aperture Laboratories Logo" id="aperture-logo">
+					<p>Aperture Science fué una empresa fundada por Cave Johnson en 1940 enfocada a la venta de cortinas de baño como Aperture 
+						Fixtures, que más adelante cambió de nombre a Aperture Science para tener una imagen mas higiénica sobre la empresa, que 
+						poco despues cambió su modelo de negocio a la ciencia y desarrollo de experimentos muy diversos.</p>
+					<p>Aperture Science se dedicaba a hacer practicas de investigación con sujetos humanos, los cuales eran seleccionados para 
+						unas pruebas u otras en funcion de sus azañas, entre estos se pueden encontrar deportistas olímpicos, heroes de guerra, 
+						bomberos y astronautas. <span class="sound" onclick="audioHandler('cave-subjects-40')">&#x1f50a;</span></p>
+					<audio id="cave-subjects-40">
+						<source src="media/voces/cave/Cave_Johnson_fifties_intro01_es.wav" type="audio/wav">
+					</audio>
+					<p>Esta empresa desarrollaba investigacones y experimentaba con algunos de sus avances, como el Gel de Repulsion, el Cubo 
+						Contenedor Pesado, el Ultrabotón Industrial Extracolisionador de 1500 Megavatios, y el Dispositivo de Tunelado 
+						Cuántico Portable de Aperture Science, una anterior y mas grande version de la moderna Pistola de Portales.
+						<span class="sound" onclick="audioHandler('cave-repulsor-gel')">&#x1f50a;</span></p>
+					<audio id="cave-repulsor-gel">
+						<source src="media/voces/cave/Cave_Johnson_fifties_repulsion_intro02_es.wav" type="audio/wav">
+					</audio>
+					<p>Con el paso de los años, Aperture Science se volvio inestable financialmente, ya no se podian permitir sujetos de pruebas 
+						como astronautas y deportistas, asi que empezó a reclutar vagabundos como sujetos de pruebas y empezaron a experimentar con 
+						el Gel de Propulsión. <span class="sound" onclick="audioHandler('cave-propulsor-gel')">&#x1f50a;</span></p>
+					<audio id="cave-propulsor-gel">
+						<source src="media/voces/cave/Cave_Johnson_seventies_outro01_es.wav" type="audio/wav">
+					</audio>
+					<p>En la época de los 80, la participación en las pruebas era de caracter obligatorio para los empleados de Aperture 
+						Science, aumentando la calidad de los sujetos de prueba, pero no la cantidad. Los problemas monetarios de la empresa 
+						eran severos, pero el desarrollo continuó. Cave Johnson, en contra de las recomendaciones del departamento de contabilidad, 
+						compró rocas lunares y las usó para desarrollar el Gel de Conversión, un buen conductor de portales. 
+						<span class="sound" onclick="audioHandler('cave-subjects-80')">&#x1f50a;</span><br>
+						<audio id="cave-subjects-80">
+							<source src="media/voces/cave/Cave_Johnson_eighties_intro03_es.wav" type="audio/wav">
+						</audio>
+						Durante el desarrollo del Gel de Conversión, Cave Johnson se envenenó con las piedras lunares, haciendo que su vida se vea 
+						en peligro de muerte. <span class="sound" onclick="audioHandler('cave-poison')">&#x1f50a;</span><br>
+						<audio id="cave-poison">
+							<source src="media/voces/cave/Cave_Johnson_eighties_intro08_es.wav" type="audio/wav">
+						</audio>
+						
+						A causa de este acontecimiento, Cave Johnson, se le ocurrió la idea de guardar la conciencia y sentimientos humanos en un 
+						disco, asi que puso a todos sus empleados a investigar sobre la Inteligencia Artificial y como guardar un cerebro humano 
+						digitalmente, y la creación de robots para suplantar los sujetos de pruebas humanos. 
+						<span class="sound" onclick="audioHandler('cave-ai')">&#x1f50a;</span><br>
+						<audio id="cave-ai">
+							<source src="media/voces/cave/Cave_Johnson_eighties_outro05_es.wav" type="audio/wav">
+						</audio>
+						Al morir, Caroline, su secretaria, tomó las riendas de Aperture Science, y a peticion de Cave Johnson, Caroline fue insertada 
+						en un ordenador.</p>
+					
+					<p>En 1998, GLaDOS (Genetic Life and Disk Operating System) fué activada por primera vez. GLaDOS instantáneamente se vovió 
+						independiente y homicida, e inundo el centro de desarrollo con una Neurotoxina Letal, matando a gran parte de los cientificos. 
+						<span class="sound" onclick="audioHandler('glados-neurotoxins')">&#x1f50a;</span></p>
+					<audio id="glados-neurotoxins">
+						<source src="media/voces/glados/GLaDOS_testchambermisc39_es.wav" type="audio/wav">
+					</audio>
+					<p>Aperture Science fue cerrada y envuelta en un ciclo permanente de pruebas supervisadas por GLaDOS.</p>
+				</div>
+			</div>
+			<div class="article-separator footer"></div>
+		</article>
+		<footer id="characters-header">
+			<div class="background-video">
+				<div class="video-gradient inverted"></div>
+				<div class="video-gradient"></div>
+				<video autoplay loop muted>
+					<source src="media/videos/bg/portalbg2.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="presentation-text">"!Bienvenidos caballeros a Aperture Science¡<br> Soy Cave Johnson, el dueño de esto."
+				<span class="sound" onclick="audioHandler('cave-welcome')">&#x1f50a;</span>
+				<div class="presentation-author">- cave johnson</div>
+			</div>
+			<audio id="cave-welcome">
+				<source src="media/voces/cave/Cave_Johnson_fifties_intro01_intro04_es.wav" type="audio/wav">
+			</audio>
+		</footer>
+		<a href="#top"><div id="back"></div></a>
+		<div id="volume-control">VOLUMEN
+			<div class="volume-panel">
+				<div>Voces:</div>
+				<input type="range" id="voiceVolume" class="slider" oninput="setVoicesVolume()" value="20">
+				<div>Música:</div>
+				<input type="range" id="bgVolume" class="slider" oninput="setBGVolume()" value="00"><!-- volumen 10 -->
+			</div>
+			
+		</div>
+	</body>
+	
+</html>
