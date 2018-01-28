@@ -339,6 +339,7 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 }
 /* FIN CABECERA */
 /* ARTICULOS */
+/* Aperture */
 #aperture .article-separator {
 	display: inline-block;
 	position: relative;
@@ -356,7 +357,7 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 	position: absolute;
 	bottom: 0px;
 	left: 21.1%;
-	width: 57.5%;
+	width: 57.3%;
 	height: 6.4vw;
 	padding: 0;
 	background-color: #3f3f3f;
@@ -386,13 +387,45 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 	width: 75%;
 	
 }
+/* historia */ 
+#history .article-title {
+	font-size: 3vw;
+	text-align: center;
+	width: 100%;
+	font-family: "din-bold";
+}
 #history .article-container {
-	width: 80vw;
-	height: 1000px;
-	margin: 100px auto;
+	display: block;
+	width: 70vw;
+	margin: 25px auto 100px;
+	padding: 1vw 3vw;
 	background-image: url(media/portal-panel-top-rusted.png), url(media/portal-panel-bottom-rusted.png);
 	background-repeat: repeat-x, repeat;
 	background-size: 26.67vw;
+	color: #000;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+}
+#history .article-container h1,
+#history .article-container h2{
+	text-align: center;
+}
+#history .article-container h2 {
+	font-size: 2vw;
+	font-family: "din-medium";
+	margin-top: 0px;
+}
+#history .article-container h1 {
+	font-size: 1.5vw;
+	font-family: "din-light";
+	margin-bottom: 0px;
+}
+#history .article-container p {
+	font-size: 1.2vw;
+}
+#history .article-container img {
+	display: block;
+	margin: auto;
+	height: 6vw;
 }
 /* Articulo personajes */
 #characters-header {position: relative;}
