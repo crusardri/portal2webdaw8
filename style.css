@@ -398,12 +398,18 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 	display: block;
 	width: 70vw;
 	margin: 25px auto 100px;
-	padding: 1vw 3vw;
-	background-image: url(media/portal-panel-top-rusted.png), url(media/portal-panel-bottom-rusted.png);
-	background-repeat: repeat-x, repeat;
-	background-size: 26.67vw;
+	padding: 1vw 3vw;	
 	color: #000;
 	text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+}
+#history .article-container#portal2 {
+	background-image: url(media/portal-panel-top-rusted.png), url(media/portal-panel-bottom-rusted.png);
+	background-repeat: repeat-x, repeat;
+	background-size: 26.67%;
+}
+#history .article-container#portal {
+	background-image: url(media/portal-panel.png);
+	background-size: 6.72%;
 }
 #history .article-container h1,
 #history .article-container h2{
@@ -423,7 +429,7 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 #history .article-container p {
 	font-size: 1.2vw;
 }
-#history .article-container img {
+#history img {
 	display: block;
 	margin: auto;
 	height: 6vw;
