@@ -350,8 +350,7 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 /* ARTICULOS */
 /* Aperture */
 #aperture .article-separator {
-	display: inline-block;
-	position: relative;
+	display: flex;
 	width: 100%;
 	height: 10vw;
 	background-image: url(media/panel-black.png);
@@ -360,12 +359,10 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 	margin: 0px;
 	vertical-align: bottom;
 }
-#aperture .article-separator.header {background-position: center bottom;}
-#aperture .article-separator.footer {background-position: center top;}
+#aperture .article-separator.header {background-position: 9.3% bottom;}
+#aperture .article-separator.footer {background-position: 9.3% top;}
 #aperture .article-title {
-	position: absolute;
-	bottom: 0px;
-	left: 21.1%;
+	align-self: flex-end;
 	width: 57.3%;
 	height: 6.4vw;
 	padding: 0;
@@ -375,6 +372,7 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 	text-align: center;
 	font-family: "din-bold";
 	color: #838383;
+	margin-bottom: 0;
 }
 #aperture .article-content {
 	display: inline-block;
@@ -463,6 +461,7 @@ article .item-container .item-title {
 }
 article .item-text {
 	padding: 0 2vw 2vw;
+	text-align: justify;
 }
 article .item-text img {
 	max-height: 50vw;
