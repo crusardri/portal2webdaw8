@@ -458,7 +458,8 @@ article .item-container {
 }
 article .item-container .item-title {
 	font-size: 3vw;
-	padding: 2.4% ;
+	padding: 2.4%;
+	font-family: "din-bold";
 }
 article .item-text {
 	padding: 0 2vw 2vw;
