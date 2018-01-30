@@ -60,9 +60,9 @@
 		/*Controlador de voces*/
 		function audioHandler(id){
 			var audio = document.getElementById(id);
-			
+			/* para todas las voces excepto la especificada*/
 			for (i = 0; i <= voices.length - 1 ; i++) {
-			if (voices[i].id.indexOf("bg") == -1) { //Si no contiene "bg" en la ID
+			if (voices[i].id.indexOf("bg") == -1 && voices[i].id.indexOf(id) == -1) { //Si no contiene "bg" o la ID especificada en la ID
 					voices[i].pause();
 				}
 			}	
