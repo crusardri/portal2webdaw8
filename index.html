@@ -58,6 +58,12 @@
 		/*Controlador de audio*/
 		function audioHandler(id){
 			var audio = document.getElementById(id);
+			var voices = document.getElementsByTagName("audio");
+			for (i = 0; i <= voices.length - 1 ; i++) {
+			if (voices[i].id.indexOf("bg") == -1) { //Si no contiene "bg" en la ID
+					voices[i].pause();
+				}
+			}	
 			if (isPlaying(audio)) {
 				audio.pause();
 			} else {
