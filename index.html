@@ -27,15 +27,17 @@
 			});
 		});
 		
+
+		var audioVolume; /* Volumen de las voces */
+		var voices = document.getElementsByTagName("audio"); /* Cantidad de voces */
 		/*Comprobador de estado de reproduccion*/
-		var audioVolume;
 		function isPlaying(id) { 
 			return !id.paused;
 		}
 		/*Control de volumen de las voces*/
 		function setVoicesVolume() {		
 			audioVolume = document.getElementById("voiceVolume").value / 100;
-			var voices = document.getElementsByTagName("audio");
+
 			for (i = 0; i <= voices.length - 1 ; i++) {
 				if (voices[i].id.indexOf("bg") == -1) { //Si no contiene "bg" en la ID
 					voices[i].volume = audioVolume;
@@ -55,10 +57,10 @@
 			}
 
 		}	
-		/*Controlador de audio*/
+		/*Controlador de voces*/
 		function audioHandler(id){
 			var audio = document.getElementById(id);
-			var voices = document.getElementsByTagName("audio");
+			
 			for (i = 0; i <= voices.length - 1 ; i++) {
 			if (voices[i].id.indexOf("bg") == -1) { //Si no contiene "bg" en la ID
 					voices[i].pause();
