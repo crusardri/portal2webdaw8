@@ -310,12 +310,12 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 #dropdown-personality-core {
 	background-image: url("media/SpaceCore.png");
 }
-#dropdown-rattman {
+#dropdown-rattmann {
 	background-image: url("media/Doug_Rattmann.jpg");
 	background-size: 100% auto;
 	background-position: center -20px;
 }
-.dropdown-item:hover #dropdown-rattman {
+.dropdown-item:hover #dropdown-rattmann {
 	background-size: 105% auto;
 }
 #dropdown-coop-robots {
