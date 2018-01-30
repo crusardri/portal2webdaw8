@@ -478,15 +478,17 @@ article .item-container.underground .item-title {
 	color: #dbc93c;
 }
 article .item-container.rat {
-	background: url("media/Rat_Man_scrawling_5a.png"), 
-		url("media/Rat_Man_scrawling_5b.png"),
+	background: url("media/Rat_Man_scrawling_5a.png"), 	
+		url("media/Rat_Man_scrawling_1a.png"),	
 		url("media/Rat_Man_scrawling_3a.png"), 
+		url("media/Rat_Man_scrawling_5b.png"),
 		url("media/rattmann-wall.jpg");
-	background-size: 19.2%, 9.7%, 19.3% ,50%;
-	background-repeat: no-repeat, no-repeat,no-repeat, repeat;
+	background-size: 19.25%, 19.26%, 19.25%, 9.65%, 50%;
+	background-repeat: no-repeat, no-repeat,no-repeat, no-repeat, repeat;
 	background-position: top center,
-		95% 95%,
-		90% 3%,
+		95% 2%,
+		5% 100%,
+		90% 95%,
 		top left;
 	text-shadow: 1px 1px rgba(255,255,255,0.25), 
 		1px -1px rgba(255,255,255,0.5), 
