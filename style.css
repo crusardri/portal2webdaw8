@@ -242,45 +242,46 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 	transition: background-size 0.1s;
 }
 #dropdown-cubes {
-	background-image: url("media/Portal2_StorageCube.png");
+	background-image: url("media/menu-images/cube.png");
 }
 #dropdown-Thermal-Discouragement-Beam {
-	background-image: url("media/Thermal_Discouragement_Beam.jpg");
+	background-image: url("media/menu-images/laser_emitter.png");
 }
 #dropdown-aereal-faith-plate {
-	background-image: url("media/Faith_plate.png");
+	background-image: url("media/menu-images/faithplate.png");
 }
 #dropdown-excursion-funnel {
-	background-image: url("media/Excursion_Funnel.jpg");
+	background-image: url("media/menu-images/tbeam.png");
 }
 #dropdown-hard-light-bridge {
-	background-image: url("media/Hard-Light_Bridge.jpg");
+	background-image: url("media/menu-images/hard_light_emitter.png");
 }
 #dropdown-Emancipation-Grid {
-	background-image: url("media/Emancipation_Grid.jpg");
+	background-image: url("media/menu-images/fizzler.png");
 }
 #dropdown-portal-gun {
 	background-image: url("media/ASHPD_Portal_Gun.png");
+	background-color: #e5e7e8;
 	background-size: 100% auto;
 }
 .dropdown-item:hover #dropdown-portal-gun {
 	background-size: 105% auto;
 }
 #dropdown-high-energy-pellet {
-	background-image: url("media/High_Energy_Pellet_alternative.jpg");
+	background-image: url("media/menu-images/pelletlauncher.png");
 }
 #dropdown-turret {
-	background-image: url("media/Portal2_Turret_Standard.png");
+	background-image: url("media/menu-images/turret.png");
 }
 #dropdown-gels {
-	background-image: url("media/Repulsion_Gel.png");
+	background-image: url("media/menu-images/paintsplat_bounce.png");
 	background-size: 100% auto;
 }
 .dropdown-item:hover #dropdown-gels {
 	background-size: 105% auto;
 }
 #dropdown-button {
-	background-image: url("media/Portal_2_Switch.png");
+	background-image: url("media/menu-images/portal_button.png");
 }
 #dropdown-chell {
 	background-image: url("media/Chell_from_Personality_Test.jpg");
