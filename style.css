@@ -275,10 +275,6 @@ header nav .menu-item .dropdown .dropdown-container .dropdown-item-container .dr
 }
 #dropdown-gels {
 	background-image: url("media/menu-images/paintsplat_bounce.png");
-	background-size: 100% auto;
-}
-.dropdown-item:hover #dropdown-gels {
-	background-size: 105% auto;
 }
 #dropdown-button {
 	background-image: url("media/menu-images/portal_button.png");
