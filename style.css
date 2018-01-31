@@ -499,6 +499,10 @@ article .item-text img {
 	margin:  0 3vw;
 	float: right;
 }
+article .item-text dt{
+	font-family: "din-bold";
+	margin-bottom: 10px;
+}
 /* footer */
 footer {position: relative;}
 
