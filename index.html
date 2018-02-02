@@ -7,7 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="scripts.js"></script>
 	</head>
-	<body onload="setVoicesVolume(), setBGVolume()">
+	<body onload="setVoicesVolume(), setBGVolume(), writeComments()">
 		<audio id="bg-sound" autoplay loop muted>
 			<source src="media/music/Portal2-05-Technical_Difficulties.mp3" type="audio/mp3">
 		</audio>
@@ -649,7 +649,7 @@
 				<label>Nombre: </label><input type="text" placeholder="(ESCRIBE AQUÍ TU NOMBRE)" name="name">
 				<label>Tema: </label><input type="text" placeholder="(ESCRIBE AQUÍ EL TEMA DEL COMENTARIO)" name="title">
 				<label>Comentario: </label><textarea placeholder="(ESCRIBE AQUÍ TU COMENTARIO)" name="comment"></textarea>
-				<input type="submit" value="ENVIAR COMENTARIO">
+				<input type="submit" value="ENVIAR COMENTARIO" onclick="">
 			</form>
 		</div>
 		<footer>
