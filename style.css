@@ -465,6 +465,25 @@ article .item-text dt{
 	font-family: "din-bold";
 	margin-bottom: 10px;
 }
+
+/*Comments*/
+#comments {
+	width: 100%;
+	height: 500px;
+	background-image: url(media/panel-grey.png);
+	background-size: 7.73%;
+	box-shadow: inset 0 0 100px 25px rgba(0,0,0,0.3);
+	margin: 0 0 5vw 0;
+}
+#comments .comments-title {
+	font-size: 4vw;
+	padding: 0 3vw;
+	height: 7.7vw;
+	line-height: 7.7vw;
+	font-family: "din-bold";
+	color: #9ba8a5;
+}
+#comments {}
 /* footer */
 footer {position: relative;}
 
