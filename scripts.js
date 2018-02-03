@@ -67,55 +67,23 @@ function audioHandler(id){
 	}
 }
 /* Comentarios */
-var commentCookie = getComments();
-var commentsComment = new Array();
-
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+function get(name){
+   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+}
+function writeComment(){
+	var commentContainer = document.getElementById("custom-comment");
+	var cName = get("name");
+	var cTitle = get("title");
+	var cText = get("text");
+	var fullCommentCode = '<div class="comment-item">' +
+			'<div class="comment-desc">Tema:&nbsp</div><div class="comment-title">' + cTitle + '</div>' +
+			'<div class="comment-desc">Comentario:&nbsp</div><div class="comment-text">' + cText + '</div>' +
+			'<div class="comment-author">' + cName +'</div></div>';
+	history.pushState("", "Proyecto WEB",location.pathname);
+	if (typeof cName != 'undefined') {
+		commentContainer.innerHTML = fullCommentCode.replace(/\+/g," ");
+	} 
+		
 }
 
-function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-function getComments(){
-	commentsContent = getCookie(commentCookie);
-	console.log("contenido cookie:" + commentsContent);
-	setCookie(commentsContent, '{"comments" : [{"name": "Iván","title" : "Dejar espacio", "comment" : "Dejar espacio para comentar a los demas}]}', 365);
-	if (commentsContent == "") {
-		setCookie(commentsContent, '{"comments" : [{"name": "Iván","title" : "Dejar espacio", "comment" : "Dejar espacio para comentar a los demas}]}', 365);
-	}
-	console.log(commentsContent.comments[0].name);
-}
-function writeComments(){
-	var comments = JSON.parse(commentCookie);
-	var commentsHTML;
-	var commentsContainer = document.getElementById("cookie-comments");
-	getComments();
-	console.log(Object.keys(comments).length);
-	for (var i = 0; i < Object.keys(comments).length; i++) {
-		commentsHTML = commentsHTML + '<div class="comment-desc">Tema:&nbsp</div><div class="comment-title">' + comments.comments[i].title + '</div>';
-		commentsHTML = commentsHTML + '<div class="comment-desc">Comentario:&nbsp</div><div class="comment-text">' + comments.comments[i].comment + '</div>';
-		commentsHTML = commentsHTML + '<div class="comment-author">' + comments.comments[i].name + '</div>';
-	}
-	commentsContainer.innerHTML = comments;
-}
-
-function setComments(){
-	
-}

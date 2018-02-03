@@ -7,7 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="scripts.js"></script>
 	</head>
-	<body onload="setVoicesVolume(), setBGVolume(), writeComments()">
+	<body onload="setVoicesVolume(), setBGVolume(), writeComment()">
 		<audio id="bg-sound" autoplay loop muted>
 			<source src="media/music/Portal2-05-Technical_Difficulties.mp3" type="audio/mp3">
 		</audio>
@@ -90,6 +90,7 @@
 						</div>
 					</div>
 				</div>
+				<a href="#comments"><div class="menu-item">COMENTARIOS</div></a>
 				<span style="clear: both"></span>
 			</nav>
 			<div class="presentation-text">"Bienvenido de nuevo al Centro de desarrollo de Aperture Science."
@@ -594,7 +595,7 @@
 
 		</article>
 		<div id="comments">
-			<div class="comments-title">Comentarios y reclamaciones</div>
+			<div class="comments-title">Comentarios</div>
 			<div class="comments-content">
 				<div class="comment-item">
 					<div class="comment-desc">Tema:&nbsp;;</div>
@@ -603,8 +604,6 @@
 					<div class="comment-text">Esta página estaria mejor si añadieras mas sujetos de pruebas, ya sabes, por la ciencia.</div>
 					<div class="comment-author">GLaDOS</div>
 				</div>
-			</div>
-			<div class="comments-content">
 				<div class="comment-item">
 					<div class="comment-desc">Tema:&nbsp;</div>
 					<div class="comment-title">Experimento: Mantis religiosa</div>
@@ -613,8 +612,6 @@
 						es que no salió muy bien, pero nos lo pasamos en grande disparando a Mantis Mutantes.</div>
 					<div class="comment-author">Cave Johnson</div>
 				</div>
-			</div>
-			<div class="comments-content">
 				<div class="comment-item">
 					<div class="comment-desc">Tema:&nbsp;</div>
 					<div class="comment-title">¡ESPAAAAAAAAAAAAAAAAAAAACIO!</div>
@@ -623,8 +620,6 @@
 						¡ES-PA-CIO! ¡RA RA RA! ¡ES-PA-CIO! Oooh, el sol. Voy a conocer al sol... ¡Ay, no! ¿Y qué le digo? ¡Hola, sol! Ay mama.</div>
 					<div class="comment-author">Núcleo Espacial</div>
 				</div>
-			</div>
-			<div class="comments-content">
 				<div class="comment-item">
 					<div class="comment-desc">Tema:&nbsp;</div>
 					<div class="comment-title">Androides militares</div>
@@ -633,8 +628,6 @@
 						Saben leer y tienen una copia de las Leyes de la robótica. Una para todos.</div>
 					<div class="comment-author">Locutor</div>
 				</div>
-			</div>
-			<div class="comments-content">
 				<div class="comment-item">
 					<div class="comment-desc">Tema:&nbsp;</div>
 					<div class="comment-title">¡Hace frio aquí fuera!</div>
@@ -643,15 +636,13 @@
 						Aquí en el espacio hace mucho frio, me voy a congelar aqui fuera. Por favor, dejarme volver. ¡LO SIENTO! de verdad.</div>
 					<div class="comment-author">Wheatley</div>
 				</div>
+				<div id="custom-comment" style="margin: 0; padding: 0"></div>
 			</div>
-			<div id="cookie-comments" style="margin: 0; padding: 0">
-
-			</div>
-			<form id="comment-form" action="index.html">
-				<label>Nombre: </label><input type="text" placeholder="(ESCRIBE AQUÍ TU NOMBRE)" name="name">
-				<label>Tema: </label><input type="text" placeholder="(ESCRIBE AQUÍ EL TEMA DEL COMENTARIO)" name="title">
-				<label>Comentario: </label><textarea placeholder="(ESCRIBE AQUÍ TU COMENTARIO)" name="comment"></textarea>
-				<input type="submit" value="ENVIAR COMENTARIO" onclick="">
+			<form id="comment-form" action="index.html#comments">
+				<label>Nombre: </label><input type="text" placeholder="(ESCRIBE AQUÍ TU NOMBRE)" name="name" autocomplete="off">
+				<label>Tema: </label><input type="text" placeholder="(ESCRIBE AQUÍ EL TEMA DEL COMENTARIO)" name="title" autocomplete="off">
+				<label>Comentario: </label><textarea placeholder="(ESCRIBE AQUÍ TU COMENTARIO)" name="text" autocomplete="off"></textarea>
+				<input type="submit" value="ENVIAR COMENTARIO">
 			</form>
 		</div>
 		<footer>
