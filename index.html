@@ -633,15 +633,22 @@
 					<div class="comment-title">¡Hace frio aquí fuera!</div>
 					<div class="comment-desc">Comentario:&nbsp;</div>
 					<div class="comment-text">¿Hola? ¿Esto funciona? Si este mensaje llega, quiero que sepais que he aprendido la lección y que quiero volver.
-						Aquí en el espacio hace mucho frio, me voy a congelar aqui fuera. Por favor, dejarme volver. ¡LO SIENTO! de verdad.</div>
+						Aquí en el espacio hace MUUUUUUUUCHO frio, me voy a congelar aquí fuera. Por favor, dejarme volver. ¡LO SIENTO! de verdad.</div>
 					<div class="comment-author">Wheatley</div>
 				</div>
 				<div id="custom-comment" style="margin: 0; padding: 0"></div>
 			</div>
 			<form id="comment-form" action="index.html#comments">
-				<label>Nombre: </label><input type="text" placeholder="(ESCRIBE AQUÍ TU NOMBRE)" name="name" autocomplete="off">
-				<label>Tema: </label><input type="text" placeholder="(ESCRIBE AQUÍ EL TEMA DEL COMENTARIO)" name="title" autocomplete="off">
-				<label>Comentario: </label><textarea placeholder="(ESCRIBE AQUÍ TU COMENTARIO)" name="text" autocomplete="off"></textarea>
+				<label>Nombre: </label><input type="text" placeholder="(ESCRIBE AQUÍ TU NOMBRE)" name="name" autocomplete="off" required>
+				<label>Tema: </label><input type="text" placeholder="(ESCRIBE AQUÍ EL TEMA DEL COMENTARIO)" name="title" autocomplete="off" required>
+				<label>Comentario: </label><textarea placeholder="(ESCRIBE AQUÍ TU COMENTARIO)" name="text" autocomplete="off" required></textarea>
+				<input type="checkbox" name="acceptrules" id="checkboxrules" required><label class="rules" for="checkboxrules"><span></span>
+				Acepto las políticas sobre comentarios de Aperture Science, en la cual renuncio
+				a mi derecho de reclamar por cualquier tipo de daño o perjuicio sobre, pero no limitado a, daños ligeros cerebrales algudos, emancipación
+				de los conductos auditivos y/o contacto con androides militares letales.<br><br>
+				Si tiene alguna duda acerca de esta política, o necesita una traducción al inglés, escriba una carta al centro de desarrollo, un técnico de 
+				Aperture Science la leerá, y contestará en un plazo de NaN días.<br>
+				</label><br>
 				<input type="submit" value="ENVIAR COMENTARIO">
 			</form>
 		</div>
