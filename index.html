@@ -98,7 +98,7 @@
 				<div class="presentation-author">- LOCUTOR</div>
 			</div>
 			<audio id="locutor-welcome">
-				<source src="media/voces/locutor/Announcer_prehub06_es.mp3" type="audio/mp3">
+				<source src="media/voces/announcer/Announcer_prehub06_es.mp3" type="audio/mp3">
 			</audio>
 		</header>
 		<article id="history">
@@ -137,12 +137,12 @@
 				<p>Siguiendo los eventos de Portal, Chell es levantada 50 dias despues en su camara de relajación, que tiene una apariencia como una habitación 
 					de hotel, para realizar un breve ejercicio físico y mental. <span class="sound" onclick="audioHandler('locutor-50-days')">&#x1f50a;</span></p>
 				<audio id="locutor-50-days">
-					<source src="media/voces/locutor/Announcer_openingexercise01_es.mp3" type="audio/mp3">
+					<source src="media/voces/announcer/Announcer_openingexercise01_es.mp3" type="audio/mp3">
 				</audio>
 				<p>Después de su sesión de ejercicio, vuelve a su cama para ser criogenizada y ser despertada en un periodo indeterminado de años por un aviso de 
 					fusión del núcleo del reactor. <span class="sound" onclick="audioHandler('locutor-courtesy-call')">&#x1f50a;</span></p>
 				<audio id="locutor-courtesy-call">
-					<source src="media/voces/locutor/Announcer_openingcourtesy01_es.mp3" type="audio/mp3">
+					<source src="media/voces/announcer/Announcer_openingcourtesy01_es.mp3" type="audio/mp3">
 				</audio>
 				<p>Al despertar, Chell ve que su cámara de relajación esta sucia y destrozada, y unos mensajes pregrabados le indican que ha estado criogenizada 
 					una cantidad idefinda de tiempo y avisandola de una evacuación de emergencia debido a una fusión del reactor.<br>
@@ -297,11 +297,11 @@
 			</div>
 		</article>
 		<article id="aperture">
-			<div class="article-separator header"><div class="article-title">APERTURE SCIENCE</div></div>
+			<div class="article-separator header"><div class="article-title">APERTURE LABORATORIES</div></div>
 			<div class="article-content">
 				<div class="article-text">
 					<img src="media/aperture-science.png" alt="Aperture Laboratories Logo" id="aperture-logo">
-					<p>Aperture Science fue una empresa fundada por Cave Johnson en 1940 enfocada a la venta de cortinas de baño como Aperture 
+					<p>Aperture Laboratories fue una empresa fundada por Cave Johnson en 1940 enfocada a la venta de cortinas de baño como Aperture 
 						Fixtures, que más adelante cambió de nombre a Aperture Science para tener una imagen mas higiénica sobre la empresa, que 
 						poco despues cambió su modelo de negocio a la ciencia y desarrollo de experimentos muy diversos.</p>
 					<p>Aperture Science se dedicaba a hacer practicas de investigación con sujetos humanos, los cuales eran seleccionados para 
@@ -339,13 +339,15 @@
 
 					<p>A causa de este acontecimiento, Cave Johnson, se le ocurrió la idea de guardar la inteligencia y personalidad humana en un 
 						disco, asi que puso a todos sus empleados a investigar sobre la Inteligencia Artificial y como guardar un cerebro humano 
-						digitalmente, y la creación de robots para suplantar los sujetos de pruebas humanos. 
-						<span class="sound" onclick="audioHandler('cave-ai')">&#x1f50a;</span></p>
+						digitalmente, y la creación de robots para suplantar los sujetos de pruebas humanos.
+						<span class="sound" onclick="audioHandler('cave-ai')">&#x1f50a;</span>
+						</p>
 					<audio id="cave-ai">
 						<source src="media/voces/cave/Cave_Johnson_eighties_outro05_es.mp3" type="audio/mp3">
 					</audio>
 					<p>Al morir, Caroline, su secretaria, tomó las riendas de Aperture Science, y a peticion de Cave Johnson, Caroline fue insertada 
-						en un ordenador.</p>
+						en un ordenador.<br>
+						En esta época Aperture Science paso a llamarse Aperture Laboratories.</p>
 
 					<p>En 1998, GLaDOS (Genetic Life and Disk Operating System) fue activada por primera vez. GLaDOS instantáneamente se vovió 
 						independiente y homicida, e inundo el centro de desarrollo con una Neurotoxina Letal, matando a gran parte de los cientificos. 
@@ -353,7 +355,7 @@
 					<audio id="glados-neurotoxins">
 						<source src="media/voces/glados/GLaDOS_testchambermisc39_es.mp3" type="audio/mp3">
 					</audio>
-					<p>Aperture Science fue cerrada y envuelta en un ciclo permanente de pruebas supervisadas por GLaDOS.</p>
+					<p>Aperture Laboratories fue cerrada y envuelta en un ciclo permanente de pruebas supervisadas por GLaDOS.</p>
 				</div>
 			</div>
 			<div class="article-separator footer"></div>
@@ -386,7 +388,15 @@
 			</div>
 			<div class="item-container" id="glados">
 				<h1 class="item-title">GLaDOS</h1>
-				<div class="item-text"><img src="media/GLaDOS_P2.png" alt="GLaDOS" style="width: 40%;">
+				<div class="item-text">
+					<div class="quote">
+						"¿Sabías que es muy fácil asustar a la gente con la conciencia intranquila con rui...? [sirena de niebla]"
+						<span class="sound" onclick="audioHandler('glados-quote')">&#x1f50a;</span>
+						<audio id="glados-quote">
+							<source src="media/voces/glados/GLaDOS_sp_paint_jump_wall_jumps01_es.mp3" type="audio/mp3">
+						</audio>
+					</div>
+					<img src="media/GLaDOS_P2.png" alt="GLaDOS" style="width: 40%;">
 					<p>Antagonista de Portal y Portal 2, en la segunda mitad de Portal 2 GLaDOS se vuelve amiga de la protagonista.</p>
 					<p>GLaDOS es el núcleo central, diseñado para controlar, guiar y vigilar Aperture Science. Con la habilidad de mover las instalaciones
 						y cámaras de prueba. Es capaz de crear un circuito infinito de pruebas sin moverse de la cámara central de IA.</p>
@@ -414,7 +424,16 @@
 			</div>
 			<div class="item-container" id="wheatley">
 				<h1 class="item-title">WHEATLEY</h1>
-				<div class="item-text"><img src="media/Wheatley.png" alt="Wheatley" style="max-width: 30%;">
+				<div class="item-text">
+					<div class="quote">
+						"Genial. Encontraste una pistola de portales. ¿Sabes? Eso prueba que, a fin de cuentas, la gente con daños cerebrales son los 
+						auténticos héroes, ¿no es así? Unos valientes."
+						<span class="sound" onclick="audioHandler('wheatley-quote')">&#x1f50a;</span>
+						<audio id="wheatley-quote">
+							<source src="media/voces/wheatley/Wheatley_demosphereintro04_es.mp3" type="audio/mp3">
+						</audio>
+					</div>
+					<img src="media/Wheatley.png" alt="Wheatley" style="max-width: 30%;">
 					<p>Personaje principal y antagonista en la segunda mitar de Portal 2. </p>
 					<p>Wheatley, llamado "Esfera atontadora" por GLaDOS, es un núcleo de personalidad de programación masculina.</p>
 					<p>Wheatley es visto por primera vez por Chell, enganchado en un rail del techo de su habitación. Ayuda a Chell a huir de las instalaciones 
@@ -438,7 +457,15 @@
 			</div>
 			<div class="item-container underground" id="cave_johnson">
 				<h1 class="item-title">CAVE JOHNSON</h1>
-				<div class="item-text"><img src="media/Cave_Johnson_Painting_3.jpg" alt="Cave Johnson" style="max-width: 30%;">
+				<div class="item-text">
+					<div class="quote old">
+						"Me decían que no podía despedir a alguien por ir en silla de ruedas. Aún así lo hice, las rampas son caras."
+						<span class="sound" onclick="audioHandler('cave-quote')">&#x1f50a;</span>
+						<audio id="cave-quote">
+							<source src="media/voces/cave/Cave_Johnson_fifties_into_middle_of_test02_es.mp3" type="audio/mp3">
+						</audio>
+					</div>
+					<img src="media/Cave_Johnson_Painting_3.jpg" alt="Cave Johnson" style="max-width: 30%;">
 					<p>Personaje secundario con gran importancia en la hístoria del universo del juego.</p>
 					<p>Cave Johnson fue el Fundador, CEO y Dueño de Aperture Science.</p>
 					<p>Fallecido entre los años 1980-1990 por una intoxicación por polvo de piedra lunar, dejó un monton de grabaciones pregrabadas 
@@ -466,7 +493,15 @@
 			</div>
 			<div class="item-container underground" id="caroline">
 				<h1 class="item-title">CAROLINE</h1>
-				<div class="item-text"><img src="media/Cave_Johnson_Painting_4.png" alt="Caroline" style="max-width: 30%;">
+				<div class="item-text">
+					<div class="quote old">
+						"Claro, Señor Johnson."
+						<span class="sound" onclick="audioHandler('caroline-quote')">&#x1f50a;</span>
+						<audio id="caroline-quote">
+							<source src="media/voces/caroline/Caroline_cave_responses43_es.mp3" type="audio/mp3">
+						</audio>
+					</div>
+					<img src="media/Cave_Johnson_Painting_4.png" alt="Caroline" style="max-width: 30%;">
 					<p>Personaje secundario con gran importancia en la hístoria del universo del juego.</p>
 					<p>Caroline fue la asistente personal de Cave Johnson, que cuando este murió, se volvió su sucesora.</p>
 					<p>No se conoce mucho sobre su personalidad, solo se la escucha en unas grabaciones que dejó Cave Johnson durante las Cámaras de Pruebas de la 
@@ -518,14 +553,36 @@
 					<dl>
 						<dt>Núcleo Aventurero.</dt>
 						<dd>Núcleo con el ojo de color Verde. Llamado Rick, cumple con el estereotipo "Hombre duro", hablando de su 
-							valentia y sus gustos por las aventuras, que al ver a Chell coquetea con ella.<br></dd>
+							valentia y sus gustos por las aventuras, que al ver a Chell coquetea con ella.
+						<div class="quote">
+								"¡RÁPIDO! ¿CUÁL ES LA SITUACIÓN? Hey, qué tal bombón. Me llamo Rick. ¿Te gustan las aventuras?"
+								<span class="sound" onclick="audioHandler('adventure-core')">&#x1f50a;</span>
+								<audio id="adventure-core">
+									<source src="media/voces/cores/Adventure_core_babble01_es.mp3" type="audio/mp3">
+								</audio>
+							</div></dd>
 						<dt>Núcleo Informativo.</dt>
 						<dd>Núcleo con el color de ojo rosa. es el típico "Sabelotodo" que dice datos a gran velocidad los cuales
-							una muy pequeña cantidad son verdaderos, siendo la mayoria falsos e ilogicos. <br></dd>
+							una muy pequeña cantidad son verdaderos, siendo la mayoria falsos e ilogicos. 
+							<div class="quote">
+								"Antes de que los hermanos Wright inventasen el avión, si se quería volar hacía falta tragarse 100 kilos de helio."
+								<span class="sound" onclick="audioHandler('fact-core')">&#x1f50a;</span>
+								<audio id="fact-core">
+									<source src="media/voces/cores/Fact_core_fact60_es.mp3" type="audio/mp3">
+								</audio>
+							</div></dd>
 						<dt>Núcleo Espacial.</dt>
 						<dd>Núcleo con el ojo de color Naranja. Núcleo hiperactivo obsesionado con el espacio exterior que siempre
 							habla sobre, de lo que quiere hacer y como le gustaria ir allí.<br>
-							Se le concede su sueño al ser subcionado junto a Wheatley y Chell en la batalla final de Portal 2.<br></dd>
+							
+							Se le concede su sueño al ser subcionado junto a Wheatley y Chell en la batalla final de Portal 2.
+							<div class="quote">
+								"Señorita, adoro el espacio. Lo deletreo: E, ESE... PACIO. Espacio." 
+								<span class="sound" onclick="audioHandler('space-core')">&#x1f50a;</span>
+								<audio id="space-core">
+									<source src="media/voces/cores/Space_core_babbleb03_es.mp3" type="audio/mp3">
+								</audio>
+							</div></dd>
 						<dt>Núcleo Cretino.</dt>
 						<dd>Llamado Wheatley, personaje principal y antagonista en la segunda parte de Portal 2.<br></dd>
 					</dl>
@@ -534,6 +591,13 @@
 			<div class="item-container" id="announcer">
 				<h1 class="item-title">LOCUTOR</h1>
 				<div class="item-text">
+					<div class="quote">
+						"Si la Tierra está gobernada actualmente por algún monarca animal, nube inteligente u otro órgano que sea incapaz o se niegue a entrar en razón..." 
+						<span class="sound" onclick="audioHandler('announcer-quote')">&#x1f50a;</span>
+						<audio id="announcer-quote">
+							<source src="media/voces/announcer/Announcer_prehub46_es.mp3" type="audio/mp3">
+						</audio>
+					</div>
 					<p>Forma parte de los acontecimientos de Portal 2.</p>
 					<p>El locutor es un sistema automatizado creado para monitorizar y anunciar los eventos de las instalaciones, como por ejemplo, la reactivación 
 						de GLaDOS, o los avisos de evacuación de las instalaciones por fusión del reactor.</p>
@@ -601,7 +665,7 @@
 					<div class="comment-desc">Tema:&nbsp;;</div>
 					<div class="comment-title">Sujetos de prueba</div>
 					<div class="comment-desc">Comentario:&nbsp;</div>
-					<div class="comment-text">Esta página estaria mejor si añadieras mas sujetos de pruebas, ya sabes, por la ciencia.</div>
+					<div class="comment-text">Esta página estaría mejor si añadieras mas sujetos de pruebas, ya sabes, por la ciencia.</div>
 					<div class="comment-author">GLaDOS</div>
 				</div>
 				<div class="comment-item">
@@ -616,7 +680,7 @@
 					<div class="comment-desc">Tema:&nbsp;</div>
 					<div class="comment-title">¡ESPAAAAAAAAAAAAAAAAAAAACIO!</div>
 					<div class="comment-desc">Comentario:&nbsp;</div>
-					<div class="comment-text">Je je je, je, je. Voy despacio al espacio del espacio. Me compraré un telescopio para verme desde el espacio.
+					<div class="comment-text">Je je je, je, je. Voy despacio al espacio del espacio. Me compraré un telescopio para verme, para verme en el espacio.
 						¡ES-PA-CIO! ¡RA RA RA! ¡ES-PA-CIO! Oooh, el sol. Voy a conocer al sol... ¡Ay, no! ¿Y qué le digo? ¡Hola, sol! Ay mama.</div>
 					<div class="comment-author">Núcleo Espacial</div>
 				</div>
@@ -642,12 +706,12 @@
 				<label>Nombre: </label><input type="text" placeholder="(ESCRIBE AQUÍ TU NOMBRE)" name="name" autocomplete="off" required>
 				<label>Tema: </label><input type="text" placeholder="(ESCRIBE AQUÍ EL TEMA DEL COMENTARIO)" name="title" autocomplete="off" required>
 				<label>Comentario: </label><textarea placeholder="(ESCRIBE AQUÍ TU COMENTARIO)" name="text" autocomplete="off" required></textarea>
-				<input type="checkbox" name="acceptrules" id="checkboxrules" required><label class="rules" for="checkboxrules"><span></span>
+				<input type="checkbox" name="acceptrules" id="checkboxrules" required><label class="rules" for="checkboxrules"><span class="check"></span>
 				Acepto las políticas sobre comentarios de Aperture Science, en la cual renuncio
-				a mi derecho de reclamar por cualquier tipo de daño o perjuicio sobre, pero no limitado a, daños ligeros cerebrales algudos, emancipación
+				a mi derecho de reclamar por cualquier tipo de daño o perjuicio sobre, pero no limitado a, ligeros daños cerebrales algudos, emancipación
 				de los conductos auditivos y/o contacto con androides militares letales.<br><br>
 				Si tiene alguna duda acerca de esta política, o necesita una traducción al inglés, escriba una carta al centro de desarrollo, un técnico de 
-				Aperture Science la leerá, y contestará en un plazo de NaN días.<br>
+				Aperture Science la leerá, y contestará en un plazo de <span style="font-family: 'din-bold';">NaN</span> días.<br>
 				</label><br>
 				<input type="submit" value="ENVIAR COMENTARIO">
 			</form>
