@@ -37,12 +37,6 @@
 	font-weight: normal;
 	src: url('fonts/SAA Series CD.woff') format('woff');
 }
-@font-face {
-	font-family: 'reklame';
-	font-style: normal;
-	font-weight: normal;
-	src: url('fonts/ReklameScript-Regular.woff') format('woff');
-}
 /* Botones JS*/
 .sound {
 	cursor: pointer;
