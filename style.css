@@ -25,7 +25,7 @@
 	font-weight: normal;
 	src: url('fonts/din_bold-webfont.woff') format('woff');
 }
-@font-face  {
+@font-face {
 	font-family: 'din-light';
 	font-style: normal;
 	font-weight: normal;
@@ -46,6 +46,7 @@
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 	animation-direction: alternate-reverse; 
+	font-style: normal !important;
 }
 /* CSS */
 body {
@@ -587,6 +588,51 @@ article .item-text dt{
 #comments #comment-form input[type="submit"]:active {
 	box-shadow: none;
 	background-color: #dcd786;
+}
+#comments #comment-form label.rules {
+	font-size: 1.3vw;
+	font-family: "din";
+	color: #fff;
+	text-transform: none;
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+}
+#comments #comment-form input[type="checkbox"] {
+	display: none;
+}
+#comments #comment-form input[type="checkbox"] + label span.check {
+	display: inline-block;
+	width: 2vw;
+	height: 2vw;
+	background-color: rgba(0,0,0,0.2);
+	box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.25);
+	transform: translateY(0.55vw);
+	cursor: pointer;
+}
+#comments #comment-form input[type="checkbox"]:checked + label span.check {
+	background-image: url(media/checkbox_checked.png);
+	background-size: 80% 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+/* CITAS */
+.quote {
+	color: #24b2e5;
+	border-top: 2px solid #24b2e5;
+	border-bottom: 2px solid #24b2e5;
+	padding: 0.5vw 0.5vw;
+	margin: 0.5vw 1vw;
+	font-size: 1.1vw;
+	font-family: "din-light";
+	font-style: italic;
+}
+.quote.old {
+	color: orange;
+	border-top: 2px solid orange;
+	border-bottom: 2px solid orange;
+	font-family: "SAA";
+	font-style: normal;
 }
 /* footer */
 footer {position: relative;}

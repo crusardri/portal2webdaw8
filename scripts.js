@@ -27,7 +27,7 @@ var voices = document.getElementsByTagName("audio"); /* Cantidad de voces */
 function isPlaying(id) { 
 	return !id.paused;
 }
-/*Control de volumen de las voces*/ 
+/*Control de volumen de las voces*/
 function setVoicesVolume() {		
 	audioVolume = document.getElementById("voiceVolume").value / 100;
 
